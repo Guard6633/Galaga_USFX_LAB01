@@ -1,0 +1,7 @@
+P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB01\Definitions.Galaga_USFX_LAB01.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01/EnemyShipHunter.h
+P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01\EnemyShip.h
+P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB01\EnemyShip.generated.h
+P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB01\EnemyShipHunter.generated.h
