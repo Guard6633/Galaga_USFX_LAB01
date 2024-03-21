@@ -32,7 +32,6 @@ void AEnemyShip::BeginPlay()
 {
 	Super::BeginPlay();
 
-	
 }
 
 // Called every frame
@@ -45,22 +44,22 @@ void AEnemyShip::Tick(float DeltaTime)
 }
 
     // Movimiento en linea recta hacia abajo en el eje X
-    void AEnemyShip::MoveEnemy(float DeltaTime)
-    {
-        // Obtener la posicion actual del actor
-        FVector CurrentLocation = GetActorLocation();
-        FVector InitialLocation = GetActorLocation();
-         
-        // Mover la nave hacia abajo en el eje X
-        CurrentLocation.X -= Speed * DeltaTime;
+void AEnemyShip::MoveEnemy(float DeltaTime)
+{
+	// Obtener la posicion actual del actor
+	FVector CurrentLocation = GetActorLocation();
 
-        // Si la nave ha superado la distancia máxima, volver a la posición inicial
-        if (CurrentLocation.X < -MaxDistance)
-        {
-            CurrentLocation = InitialLocation;
-        }
+	// Calcular la nueva posición
+	FVector NewLocation = CurrentLocation + (FVector(-1.0f, 0.0f, 0.0f) * Speed * DeltaTime);
 
-        // Actualizar la posición del actor
-        SetActorLocation(CurrentLocation);
+	// Establece la nueva posicion del enemigo
+	SetActorLocation(NewLocation);
 
-    }
+	//// Si el enemigo se sale del mapa, vuelve a la posición inicial
+	//if (NewLocation.X < -15000.0f)
+	//{
+	//	SetActorLocation(FVector(1000.0f, 0.0f, 200.0f));
+	//}
+
+}
+

@@ -59,6 +59,13 @@ void AGalaga_USFX_LAB01GameMode::BeginPlay()
 			}
 
 			CoordActEnemyShip.Y += 120.0f; // Ajustar la posición de la siguiente nave enemiga
+
+			// Si el enemigo se sale del mapa, vuelve a la posición inicial
+			if (CoordActEnemyShip.Y > 1800.0f)
+			{
+				CoordActEnemyShip.Y = CoordEnemyShip.Y;
+				CoordActEnemyShip.X -= 200.0f;
+			}
 		}
 	}
 }

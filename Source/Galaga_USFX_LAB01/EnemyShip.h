@@ -24,7 +24,6 @@ public:
 	// Velocidad de la nave enemiga
 	// UPROPERTY(EditAnywhere, Category = "Movement")
 	float Speed = 100.0f;
-	float MaxDistance = -2000.0f;
 
 protected:
 	// Called when the game starts or when spawned
@@ -37,4 +36,6 @@ public:
 
 	// Funcion para mover la nave enemiga
 	void MoveEnemy(float DeltaTime);
+
+	
 };
