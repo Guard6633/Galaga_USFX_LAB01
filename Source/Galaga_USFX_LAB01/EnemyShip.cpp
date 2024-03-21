@@ -44,29 +44,23 @@ void AEnemyShip::Tick(float DeltaTime)
 	MoveEnemy(DeltaTime);
 }
 
-	// Movimiento en linea recta hacia abajo en el eje X
-void AEnemyShip::MoveEnemy(float DeltaTime)
-{
-	// Obtener la posicion actual del actor
-	FVector CurrentLocation = GetActorLocation();
+    // Movimiento en linea recta hacia abajo en el eje X
+    void AEnemyShip::MoveEnemy(float DeltaTime)
+    {
+        // Obtener la posicion actual del actor
+        FVector CurrentLocation = GetActorLocation();
+        FVector InitialLocation = GetActorLocation();
+         
+        // Mover la nave hacia abajo en el eje X
+        CurrentLocation.X -= Speed * DeltaTime;
 
-	// Crea un nuevo vector con direccion al jugador en el eje X
-	FVector NewLocation = FVector(CurrentLocation.X - Speed * DeltaTime, CurrentLocation.Y, CurrentLocation.Z);
+        // Si la nave ha superado la distancia máxima, volver a la posición inicial
+        if (CurrentLocation.X < -MaxDistance)
+        {
+            CurrentLocation = InitialLocation;
+        }
 
-	// Establece la nueva posicion del enemigo
-	SetActorLocation(NewLocation);
+        // Actualizar la posición del actor
+        SetActorLocation(CurrentLocation);
 
-	//// Obtener la posicion actual del actor
-	//FVector CurrentLocation = GetActorLocation();
-
-	//// Genera nuevas coordenadas para el enemigo
-	//float NewX = FMath::RandRange(-1000.0f, 1000.0f) * DeltaTime;
-	//float NewY = FMath::RandRange(-1000.0f, 1000.0f) * DeltaTime;
-
-	//// Crea un nuevo vector con direccion al jugador
-	//FVector NewLocation = FVector(CurrentLocation.X + NewX, CurrentLocation.Y + NewY, CurrentLocation.Z);
-
-	//// Establece la nueva posicion del enemigo
-	//SetActorLocation(NewLocation);
-	
-}
+    }

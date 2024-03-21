@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShipMother() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyShipMother, 888740196);
+	IMPLEMENT_CLASS(AEnemyShipMother, 489549521);
 	template<> GALAGA_USFX_LAB01_API UClass* StaticClass<AEnemyShipMother>()
 	{
 		return AEnemyShipMother::StaticClass();

@@ -36,10 +36,6 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EnemyMesh_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EnemyMesh;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Speed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Speed;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -62,18 +58,8 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyShip_Statics::NewProp_EnemyMesh = { "EnemyMesh", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyShip, EnemyMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemyShip_Statics::NewProp_EnemyMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyShip_Statics::NewProp_EnemyMesh_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyShip_Statics::NewProp_Speed_MetaData[] = {
-		{ "Category", "Movement" },
-		{ "Comment", "// Velocidad de la nave enemiga\n" },
-		{ "ModuleRelativePath", "EnemyShip.h" },
-		{ "ToolTip", "Velocidad de la nave enemiga" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AEnemyShip_Statics::NewProp_Speed = { "Speed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyShip, Speed), METADATA_PARAMS(Z_Construct_UClass_AEnemyShip_Statics::NewProp_Speed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyShip_Statics::NewProp_Speed_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemyShip_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyShip_Statics::NewProp_EnemyMesh,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyShip_Statics::NewProp_Speed,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AEnemyShip_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AEnemyShip>::IsAbstract,
@@ -102,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyShip, 1365097928);
+	IMPLEMENT_CLASS(AEnemyShip, 4215118416);
 	template<> GALAGA_USFX_LAB01_API UClass* StaticClass<AEnemyShip>()
 	{
 		return AEnemyShip::StaticClass();

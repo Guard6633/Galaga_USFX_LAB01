@@ -22,8 +22,9 @@ public:
 	AEnemyShip();
 
 	// Velocidad de la nave enemiga
-	UPROPERTY(EditAnywhere, Category = "Movement")
-	float Speed = 50.0f;
+	// UPROPERTY(EditAnywhere, Category = "Movement")
+	float Speed = 100.0f;
+	float MaxDistance = -2000.0f;
 
 protected:
 	// Called when the game starts or when spawned

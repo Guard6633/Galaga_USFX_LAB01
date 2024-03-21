@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShipHunter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyShipHunter, 3183091600);
+	IMPLEMENT_CLASS(AEnemyShipHunter, 2155008596);
 	template<> GALAGA_USFX_LAB01_API UClass* StaticClass<AEnemyShipHunter>()
 	{
 		return AEnemyShipHunter::StaticClass();

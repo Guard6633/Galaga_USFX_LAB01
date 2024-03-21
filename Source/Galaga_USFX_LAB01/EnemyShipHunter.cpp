@@ -3,6 +3,22 @@
 
 #include "EnemyShipHunter.h"
 
+// Called when the game starts or when spawned
+void AEnemyShipHunter::BeginPlay()
+{
+	Super::BeginPlay();
+	
+}
+
+// Called every frame
+void AEnemyShipHunter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	// Mover el enemigo
+	MoveEnemy(DeltaTime);
+}
+
 // Cmabiar el mesh de la clase hija
 AEnemyShipHunter::AEnemyShipHunter()
 {
@@ -19,7 +35,6 @@ void AEnemyShipHunter::MoveEnemy(float DeltaTime)
 	FVector CurrentLocation = GetActorLocation();
 
 	// Obtener la posición del jugador
-	// Esto es solo un ejemplo, necesitarás obtener la posición real del jugador
 	FVector PlayerLocation = FVector(-800.0f, 0.0f, 200.0f);
 
 	// Calcular la dirección hacia el jugador

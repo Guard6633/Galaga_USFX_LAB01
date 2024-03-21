@@ -14,8 +14,15 @@ class GALAGA_USFX_LAB01_API AEnemyShipHunter : public AEnemyShip
 {
 	GENERATED_BODY()
 
+protected:
+	virtual void BeginPlay() override;
+
+public:
+	virtual void Tick(float DeltaTime) override;
+
+
 	// nuevos valores de la clase hija
-	float Speed = 100.0f;
+	float Speed = 200.0f;
 
 	// Cambiar el mesh de la clase hija
 public:
