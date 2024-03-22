@@ -262,8 +262,11 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
+/FI"P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\Galaga_USFX_LAB01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\Galaga_USFX_LAB01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\Galaga_USFX_LAB01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
 "P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01\Galaga_USFX_LAB01GameMode.cpp"
-/FI"P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB01\Definitions.h"
+/FI"P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB01\Definitions.Galaga_USFX_LAB01.h"
 /Fo"P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB01\Galaga_USFX_LAB01GameMode.cpp.obj"
 /TP
 /GR-
