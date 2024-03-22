@@ -33,9 +33,8 @@ public:
 	AEnemyShipTransport* EnemyShipTransport;
 
 public:
-	// TArray de 30 diferentes naves enemigas aleatorias
 	UPROPERTY(EditAnywhere, Category = "Enemy")
-	TArray<AEnemyShip*> EnemyShips;
+	TMap<FVector, AEnemyShip*> EnemyShips;
 };
 
 

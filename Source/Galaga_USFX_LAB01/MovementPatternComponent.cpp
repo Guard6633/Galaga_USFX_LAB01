@@ -10,7 +10,9 @@ UMovementPatternComponent::UMovementPatternComponent()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	// ...
+	// definir los valores por defecto
+	Speed = 200.0f;
+    ElapsedTime = 0.0f;
 }
 
 
@@ -18,28 +20,6 @@ UMovementPatternComponent::UMovementPatternComponent()
 void UMovementPatternComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// TMap para almacenar los tipos de enemigos y sus puntos de spawn
-    TMap<FString, UClass*> EnemyShips;
-    TArray<FVector> SpawnPoints;
-
-	// Tipos de naves enemigas
-	//EnemyShips.Add("Hunter", EnemyShipHunter::StaticClass());
-	//EnemyShips.Add("Mother", EnemyShipMotherr::StaticClass());
-	//EnemyShips.Add("Spy", EnemyShipSpy::StaticClass());
-	//EnemyShips.Add("Supplier", EnemyShipSupplier::StaticClass());
-	//EnemyShips.Add("Transport", EnemyShipTransport::StaticClass());
-
-	//
-
-	//// Puntos de spawn para los enemigos
-	//SpawnPoints.Add(FVector(0, 0, 0));
-	//SpawnPoints.Add(FVector(100, 0, 0));
-	//SpawnPoints.Add(FVector(200, 0, 0));
-	//SpawnPoints.Add(FVector(300, 0, 0));
-	//SpawnPoints.Add(FVector(400, 0, 0));
-	//
-
 
 	// ...
 	
@@ -51,6 +31,35 @@ void UMovementPatternComponent::TickComponent(float DeltaTime, ELevelTick TickTy
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// ...
+	// Patron de movimiento de todas las naves
+	AActor *Parent = GetOwner();
+	if (Parent)
+	{
+		 // Calcular la nueva posición basada en el tiempo
+        FVector NewLocation = Parent->GetActorLocation();
+
+        float DeltaY = Speed * DeltaTime;
+
+        // Definir el tiempo para cambiar de dirección
+        float ChangeDirectionTime = 3.0f; // Cambiar de dirección cada 2 segundos
+
+        // Actualizar el contador de tiempo
+        ElapsedTime += DeltaTime;
+
+        // Verificar si es tiempo de cambiar de dirección
+        if (ElapsedTime >= ChangeDirectionTime)
+        {
+            // Cambiar de dirección multiplicando la velocidad por -1
+            Speed *= -1.0f;
+            ElapsedTime = 0.0f; // Reiniciar el contador de tiempo
+        }
+
+        // Actualizar la posición Y de la nave
+        NewLocation.Y += DeltaY;
+
+        // Establecer la nueva posición de la nave
+        Parent->SetActorLocation(NewLocation);
+
+	}
 }
 

@@ -16,6 +16,10 @@ public:
 	// Sets default values for this component's properties
 	UMovementPatternComponent();
 
+	// Valores de movimiento de las naves
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float Speed;
+	float ElapsedTime;
 
 protected:
 	// Called when the game starts

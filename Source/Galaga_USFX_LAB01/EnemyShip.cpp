@@ -25,6 +25,8 @@ AEnemyShip::AEnemyShip()
     EnemyMesh->SetCollisionProfileName(TEXT("NoCollision"));
     EnemyMesh->SetStaticMesh(EnemyMeshAsset.Object);
 	
+	// inicializar el componente de movimiento
+	MovementComponent = CreateDefaultSubobject<UMovementPatternComponent>(TEXT("MovementComponent"));
 }
 
 // Called when the game starts or when spawned
@@ -41,6 +43,7 @@ void AEnemyShip::Tick(float DeltaTime)
 
 	// Mover el enemigo hacia el jugador 
 	MoveEnemy(DeltaTime);
+
 }
 
     // Movimiento en linea recta hacia abajo en el eje X
@@ -55,11 +58,17 @@ void AEnemyShip::MoveEnemy(float DeltaTime)
 	// Establece la nueva posicion del enemigo
 	SetActorLocation(NewLocation);
 
-	//// Si el enemigo se sale del mapa, vuelve a la posición inicial
-	//if (NewLocation.X < -15000.0f)
-	//{
-	//	SetActorLocation(FVector(1000.0f, 0.0f, 200.0f));
-	//}
+	// Si el enemigo se sale del mapa, vuelve a la posición inicial
+	if (NewLocation.X < -1000.0f)
+	{
+		SetActorLocation(FVector(1000.0f, 0.0f, 200.0f));
+	}
 
 }
 
+// Movimiento con el componente de movimiento
+void AEnemyShip::MoveEnemyPattern(float DeltaTime)
+{
+	// Llamar al componente de movimiento
+	MovementComponent->TickComponent(DeltaTime, ELevelTick::LEVELTICK_All, nullptr);
+}

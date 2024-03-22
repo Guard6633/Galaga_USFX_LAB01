@@ -22,7 +22,6 @@ void AGalaga_USFX_LAB01GameMode::BeginPlay()
 
 	// Ubicacion de la nave enemiga
 	FVector CoordEnemyShip = FVector(1900.0f, -1800.0f, 200.0f);
-	FVector CoordActEnemyShip = CoordEnemyShip;
 	FRotator RotaionShip = FRotator(0.0f, 180.0f, 0.0f);
 
 	UWorld* const World = GetWorld();
@@ -37,34 +36,36 @@ void AGalaga_USFX_LAB01GameMode::BeginPlay()
 			switch (RandomEnemyType)
 			{
 			case 0:
-				NewEnemyShip = World->SpawnActor<AEnemyShip>(CoordActEnemyShip, RotaionShip);
+				NewEnemyShip = World->SpawnActor<AEnemyShip>(CoordEnemyShip, RotaionShip);
 				break;
 			case 1:
-				NewEnemyShip = World->SpawnActor<AEnemyShipHunter>(CoordActEnemyShip, RotaionShip);
+				NewEnemyShip = World->SpawnActor<AEnemyShipHunter>(CoordEnemyShip, RotaionShip);
 				break;
 			case 2:
-				NewEnemyShip = World->SpawnActor<AEnemyShipTransport>(CoordActEnemyShip, RotaionShip);
+				NewEnemyShip = World->SpawnActor<AEnemyShipTransport>(CoordEnemyShip, RotaionShip);
 				break;
 			case 3:
-				NewEnemyShip = World->SpawnActor<AEnemyShipSupplier>(CoordActEnemyShip, RotaionShip);
+				NewEnemyShip = World->SpawnActor<AEnemyShipSupplier>(CoordEnemyShip, RotaionShip);
 				break;
 			case 4:
-				NewEnemyShip = World->SpawnActor<AEnemyShipMother>(CoordActEnemyShip, RotaionShip);
+				NewEnemyShip = World->SpawnActor<AEnemyShipMother>(CoordEnemyShip, RotaionShip);
 				break;
 			}
 
 			if (NewEnemyShip)
 			{
-				EnemyShips.Add(NewEnemyShip);
+				EnemyShips.Add(CoordEnemyShip, NewEnemyShip);
+				//Mostrar las coordenadas de las naves enemigas en la consola
+				UE_LOG(LogTemp, Warning, TEXT("Coordenadas de la nave enemiga: %s"), *CoordEnemyShip.ToString());
 			}
+			// posicion de la siguiente nave enemiga
+			CoordEnemyShip.Y += 120.0f; 
 
-			CoordActEnemyShip.Y += 120.0f; // Ajustar la posición de la siguiente nave enemiga
-
-			// Si el enemigo se sale del mapa, vuelve a la posición inicial
-			if (CoordActEnemyShip.Y > 1800.0f)
+			// Si el enemigo se sale del mapa, vuelve a la posición de salida almacenada en el TMap
+			if (CoordEnemyShip.Y > 1800.0f)
 			{
-				CoordActEnemyShip.Y = CoordEnemyShip.Y;
-				CoordActEnemyShip.X -= 200.0f;
+				CoordEnemyShip.Y = CoordEnemyShip.Y;
+				CoordEnemyShip.X -= 120.0f;
 			}
 		}
 	}
