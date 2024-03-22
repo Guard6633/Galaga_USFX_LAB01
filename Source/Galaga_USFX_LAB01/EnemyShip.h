@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "MovementPatternComponent.h"
 #include "EnemyShip.generated.h"
 
 UCLASS()
@@ -17,13 +18,17 @@ public:
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* EnemyMesh;	
 
+	//Propiedad para el componente de movimiento
+	UPROPERTY(VisibleAnywhere, Category = "Movement")
+	UMovementPatternComponent* MovementComponent;
+
 public:	
 	// Sets default values for this actor's properties
 	AEnemyShip();
 
 	// Velocidad de la nave enemiga
 	// UPROPERTY(EditAnywhere, Category = "Movement")
-	float Speed = 100.0f;
+	float Speed = 150.0f;
 
 protected:
 	// Called when the game starts or when spawned
@@ -37,5 +42,6 @@ public:
 	// Funcion para mover la nave enemiga
 	void MoveEnemy(float DeltaTime);
 
-	
+	// Funcion de movimiento con el componente de movimiento
+	void MoveEnemyPattern(float DeltaTime);
 };

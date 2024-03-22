@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB01GameMode() {}
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX_LAB01();
 	GALAGA_USFX_LAB01_API UClass* Z_Construct_UClass_AEnemyShip_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
 	void AGalaga_USFX_LAB01GameMode::StaticRegisterNativesAGalaga_USFX_LAB01GameMode()
 	{
@@ -32,11 +33,12 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB01GameMode() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EnemyShips_Inner;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EnemyShips_ValueProp;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_EnemyShips_Key_KeyProp;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EnemyShips_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_EnemyShips;
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_EnemyShips;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -53,18 +55,18 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB01GameMode() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_Inner = { "EnemyShips", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AEnemyShip_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_ValueProp = { "EnemyShips", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_AEnemyShip_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_Key_KeyProp = { "EnemyShips_Key", nullptr, (EPropertyFlags)0x0000000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_MetaData[] = {
 		{ "Category", "Enemy" },
-		{ "Comment", "// TArray de 30 diferentes naves enemigas aleatorias\n" },
 		{ "ModuleRelativePath", "Galaga_USFX_LAB01GameMode.h" },
-		{ "ToolTip", "TArray de 30 diferentes naves enemigas aleatorias" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips = { "EnemyShips", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB01GameMode, EnemyShips), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_MetaData)) };
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips = { "EnemyShips", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalaga_USFX_LAB01GameMode, EnemyShips), EMapPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_ValueProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips_Key_KeyProp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::NewProp_EnemyShips,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGalaga_USFX_LAB01GameMode_Statics::StaticCppClassTypeInfo = {
@@ -94,7 +96,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_LAB01GameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGalaga_USFX_LAB01GameMode, 3035791841);
+	IMPLEMENT_CLASS(AGalaga_USFX_LAB01GameMode, 3071899315);
 	template<> GALAGA_USFX_LAB01_API UClass* StaticClass<AGalaga_USFX_LAB01GameMode>()
 	{
 		return AGalaga_USFX_LAB01GameMode::StaticClass();
