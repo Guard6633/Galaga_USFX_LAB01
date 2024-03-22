@@ -15,6 +15,8 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB01\Galaga_USFX_LAB01Pawn.generated.h
 P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01\EnemyShipHunter.h
 P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01\EnemyShip.h
+P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01\MovementPatternComponent.h
+P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB01\MovementPatternComponent.generated.h
 P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB01\EnemyShip.generated.h
 P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB01\EnemyShipHunter.generated.h
 P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01\EnemyShipTransport.h
