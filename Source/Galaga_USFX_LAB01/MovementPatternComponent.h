@@ -20,6 +20,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float Speed;
 	float ElapsedTime;
+	bool ChangeMode;
+	float ContMove;
+
 
 protected:
 	// Called when the game starts
@@ -28,6 +31,9 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	// Funcion para mover la nave enemiga
+	void MovePattern(float DeltaTime);
 
 	
 };
