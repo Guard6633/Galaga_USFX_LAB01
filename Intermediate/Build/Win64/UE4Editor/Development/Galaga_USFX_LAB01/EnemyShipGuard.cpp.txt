@@ -1,9 +1,0 @@
-P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB01\Definitions.Galaga_USFX_LAB01.h
-P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01\EnemyShipGuard.h
-P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01\EnemyShipMother.h
-P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01\EnemyShip.h
-P:\Proyects\Galaga_USFX_LAB01\Source\Galaga_USFX_LAB01\MovementPatternComponent.h
-P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB01\MovementPatternComponent.generated.h
-P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB01\EnemyShip.generated.h
-P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB01\EnemyShipMother.generated.h
-P:\Proyects\Galaga_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB01\EnemyShipGuard.generated.h
