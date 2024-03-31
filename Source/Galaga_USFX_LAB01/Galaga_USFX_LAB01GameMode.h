@@ -1,17 +1,13 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
+#include "SpawnEnemy.h"
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "Galaga_USFX_LAB01GameMode.generated.h"
 
-class AEnemyShip;
-class AEnemyShipHunter;
-class AEnemyShipMother;
-class AEnemyShipSpy;
-class AEnemyShipSupplier;
-class AEnemyShipTransport;
+class APlayerShip;
 
 UCLASS(MinimalAPI)
 class AGalaga_USFX_LAB01GameMode : public AGameModeBase
@@ -24,17 +20,13 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-public:
-	AEnemyShip* EnemyShip;
-	AEnemyShipHunter* EnemyShipHunter;
-	AEnemyShipMother* EnemyShipMother;
-	AEnemyShipSpy* EnemyShipSpy;
-	AEnemyShipSupplier* EnemyShipSupplier;
-	AEnemyShipTransport* EnemyShipTransport;
+	// Spawn de naves enemigas
+	ASpawnEnemy* SpawnEnemy;
 
-public:
-	UPROPERTY(EditAnywhere, Category = "Enemy")
-	TMap<FVector, AEnemyShip*> EnemyShips;
+public: 
+	APlayerShip* PlayerShip;
+
+
 };
 
 
