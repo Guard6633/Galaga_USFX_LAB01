@@ -34,9 +34,6 @@ void UMovementPatternComponent::TickComponent(float DeltaTime, ELevelTick TickTy
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// Llama a la funcion de movimiento
-	MovePattern(DeltaTime);
-
 	// Cambiar de modo de movimiento
 	if (ChangeMode)
 	{
