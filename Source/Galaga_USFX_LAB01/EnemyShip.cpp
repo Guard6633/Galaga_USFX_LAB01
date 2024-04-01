@@ -80,6 +80,15 @@ void AEnemyShip::Tick(float DeltaTime)
             Count = 0.0f;
         }
     }
+    //// Disparar cada 5 segundos
+    //static float FireInterval = 5.0f;
+    //static float TimeSinceLastFire = 0.0f;
+    //TimeSinceLastFire += DeltaTime;
+    //if (TimeSinceLastFire >= FireInterval)
+    //{
+    //    FireShot();
+    //    TimeSinceLastFire = 0.0f;
+    //}
 }
 
 // Movimiento en linea recta hacia abajo en el eje X
@@ -120,7 +129,7 @@ void AEnemyShip::FireShot()
         AActor* owner = this;
         World->SpawnActor<AGalaga_USFX_LAB01Projectile>(SpawnLocation, FRotator::ZeroRotator);
     }
-     
+
     if (FireSound)
     {
         UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());

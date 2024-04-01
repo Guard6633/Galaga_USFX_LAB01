@@ -7,8 +7,6 @@
 #include "EnemyShipSupplier.h"
 #include "EnemyShipMother.h"
 #include "EnemyShip.h"
-#include "SpawnEnemy.h"
-#include "PlayerShip.h"
 
 
 AGalaga_USFX_LAB01GameMode::AGalaga_USFX_LAB01GameMode()
@@ -22,25 +20,54 @@ void AGalaga_USFX_LAB01GameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// Spawn de PlayerShip
+	// Ubicacion de la nave enemiga
+	FVector CoordEnemyShip = FVector(1900.0f, -1800.0f, 200.0f);
+	FRotator RotaionShip = FRotator(0.0f, 180.0f, 0.0f);
+
 	UWorld* const World = GetWorld();
-	// Ubicacion de la nave del jugador
-	FVector CoordPlayerShip = FVector(-1800.0f, 0.0f, 200.0f);
-	FRotator RotationShip = FRotator(0.0f, 0.0f, 0.0f);
 
 	if (World != nullptr)
 	{
-		APlayerShip* NewPlayerShip = World->SpawnActor<APlayerShip>(CoordPlayerShip, RotationShip);
-		if (NewPlayerShip)
+		for (int i = 0; i < 30; i++)
 		{
-			PlayerShip = NewPlayerShip;
+			int RandomEnemyType = FMath::RandRange(0, 4);
+			AEnemyShip* NewEnemyShip = nullptr;
+
+			switch (RandomEnemyType)
+			{
+			case 0:
+				NewEnemyShip = World->SpawnActor<AEnemyShip>(CoordEnemyShip, RotaionShip);
+				break;
+			case 1:
+				NewEnemyShip = World->SpawnActor<AEnemyShipHunter>(CoordEnemyShip, RotaionShip);
+				break;
+			case 2:
+				NewEnemyShip = World->SpawnActor<AEnemyShipTransport>(CoordEnemyShip, RotaionShip);
+				break;
+			case 3:
+				NewEnemyShip = World->SpawnActor<AEnemyShipSupplier>(CoordEnemyShip, RotaionShip);
+				break;
+			case 4:
+				NewEnemyShip = World->SpawnActor<AEnemyShipMother>(CoordEnemyShip, RotaionShip);
+				break;
+			}
+
+			if (NewEnemyShip)
+			{
+				EnemyShips.Add(CoordEnemyShip, NewEnemyShip);
+				//Mostrar las coordenadas de las naves enemigas en la consola
+				UE_LOG(LogTemp, Warning, TEXT("Coordenadas de la nave enemiga: %s"), *CoordEnemyShip.ToString());
+			}
+			// posicion de la siguiente nave enemiga
+			CoordEnemyShip.Y += 120.0f; 
+
+			// Si el enemigo se sale del mapa, vuelve a la posición de salida almacenada en el TMap
+			if (CoordEnemyShip.Y > 1800.0f)
+			{
+				CoordEnemyShip.Y = CoordEnemyShip.Y;
+				CoordEnemyShip.X -= 120.0f;
+			}
 		}
 	}
-
-	// Crear una instancia de ASpawnEnemy
-	SpawnEnemy = GetWorld()->SpawnActor<ASpawnEnemy>();
-	// Llenar los puntos de spawn
-	SpawnEnemy->FillSpawnPoints();
-
 }
 
