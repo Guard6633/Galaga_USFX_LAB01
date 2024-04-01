@@ -13,8 +13,9 @@ class GALAGA_USFX_LAB01_API AEnemyShip : public AActor
 	GENERATED_BODY()
 
 	
-	// Aqui se cambia el MESH de la clase padre
-public: 
+	
+public:
+	// Mesh de la nave enemiga
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* EnemyMesh;	
 
