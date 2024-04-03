@@ -17,7 +17,6 @@ public:
 	UMovementPatternComponent();
 
 	// Valores de movimiento de las naves
-	UPROPERTY(EditAnywhere, Category = "Movement")
 	float Speed;
 	float ElapsedTime;
 	bool ChangeMode;

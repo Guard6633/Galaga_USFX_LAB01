@@ -19,10 +19,14 @@ class GALAGA_USFX_LAB01_API ASpawnEnemy : public AActor
 	GENERATED_BODY()
 	
 	// Mesh del spawn point
-	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* SpawnMesh;
 
-	
+	// Contenedor con los tipos de naves enemigas
+	TArray<TSubclassOf<AEnemyShip>> EnemyShips;
+
+	// Puntos de destino y naves enemigas a spawnear
+	TMap<FVector, AEnemyShip*> ShipContainer1;
+	TMap<FVector, AEnemyShip*> ShipContainer2;
 
 public:	
 	// Sets default values for this actor's properties
@@ -44,11 +48,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	
-	// Puntos de destino y naves enemigas a spawnear
-	UPROPERTY(EditAnywhere, category = "Spawner")
-	TMap<FVector, AEnemyShip*> SpawnPoints;
+	
 
-	// Metodo para llenar el contenedor de naves y sus puntos de destino
-	void FillSpawnPoints();
+	// Generar y mover las naves a su posicion en el TMap
+	void SpawnFromPoints();
+
+	void AssignPositionToShip();
 
 };

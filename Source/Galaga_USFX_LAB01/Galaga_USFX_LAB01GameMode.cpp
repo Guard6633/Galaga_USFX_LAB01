@@ -39,8 +39,8 @@ void AGalaga_USFX_LAB01GameMode::BeginPlay()
 
 	// Crear una instancia de ASpawnEnemy
 	SpawnEnemy = GetWorld()->SpawnActor<ASpawnEnemy>();
-	// Llenar los puntos de spawn
-	SpawnEnemy->FillSpawnPoints();
+	// Llamar a la funcion SpawnFromPoints
+	SpawnEnemy->SpawnFromPoints();
 
 }
 

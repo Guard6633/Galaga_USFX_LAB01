@@ -2,6 +2,7 @@
 
 
 #include "EnemyShip.h"
+#include "MovementPatternComponent.h"
 
 #include "Components/StaticMeshComponent.h"
 #include "UObject/ConstructorHelpers.h"
@@ -38,7 +39,7 @@ AEnemyShip::AEnemyShip()
     FireSound = FireAudio.Object;
 
 	// Valores iniciales
-	Speed = 400.0f;
+	Speed = 500.0f;
     ChangeMove = true;
     Count = 0.0f;
 
@@ -58,13 +59,10 @@ void AEnemyShip::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-    // Mover el enemigo hacia el jugador 
-	//MoveEnemy(DeltaTime);
-	// La nave no se mueve durante 10 segundos y luego se mueve hacia abajo
     if (ChangeMove == true)
     {
         Count += DeltaTime;
-        if (Count >= 10.0f)
+        if (Count >= 5.0f)
         {
             ChangeMove = false;
             Count = 0.0f;
@@ -74,7 +72,7 @@ void AEnemyShip::Tick(float DeltaTime)
     {
         MoveEnemy(DeltaTime);
         Count += DeltaTime;
-        if (Count >= 6.0f)
+        if (Count >= 10.0f)
         {
             ChangeMove = true;
             Count = 0.0f;

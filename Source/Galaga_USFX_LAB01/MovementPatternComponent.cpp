@@ -11,7 +11,7 @@ UMovementPatternComponent::UMovementPatternComponent()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	// definir los valores por defecto
-	Speed = 200.0f;
+	Speed = 500.0f;
     ElapsedTime = 0.0f;
 	ChangeMode = true;
 	ContMove = 0.0f;
@@ -39,7 +39,7 @@ void UMovementPatternComponent::TickComponent(float DeltaTime, ELevelTick TickTy
 	{
 		MovePattern(DeltaTime);
 		ContMove += DeltaTime;
-		if (ContMove >= 10.0f)
+		if (ContMove >= 5.0f)
 		{
 			ChangeMode = false;
 			ContMove = 0.0f;
@@ -48,7 +48,7 @@ void UMovementPatternComponent::TickComponent(float DeltaTime, ELevelTick TickTy
 	else
 	{
 		ContMove += DeltaTime;
-		if (ContMove >= 20.0f)
+		if (ContMove >= 10.0f)
 		{
 			ChangeMode = true;
 			ContMove = 0.0f;
@@ -68,7 +68,7 @@ void UMovementPatternComponent::MovePattern(float DeltaTime)
 		float DeltaY = Speed * DeltaTime;
 
 		// Definir el tiempo para cambiar de dirección
-		float ChangeDirectionTime = 3.0f; 
+		float ChangeDirectionTime = 0.5f; 
 
 		// Actualizar el contador de tiempo
 		ElapsedTime += DeltaTime;

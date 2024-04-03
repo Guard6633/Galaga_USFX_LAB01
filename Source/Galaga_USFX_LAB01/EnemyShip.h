@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "MovementPatternComponent.h"
 #include "EnemyShip.generated.h"
 
 UCLASS()
@@ -16,15 +15,12 @@ class GALAGA_USFX_LAB01_API AEnemyShip : public AActor
 	
 public:
 	// Mesh de la nave enemiga
-	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* EnemyMesh;	
 
 	// Propiedad para el componente de movimiento
-	UPROPERTY(VisibleAnywhere, Category = "Movement")
-	UMovementPatternComponent* MovementComponent;
+	class UMovementPatternComponent* MovementComponent;
 
 	// Sonido de disparo
-	UPROPERTY(EditAnywhere, Category = "Audio")
 	class USoundBase* FireSound;
 
 private:
@@ -36,7 +32,6 @@ public:
 	AEnemyShip();
 
 	// Atributos de la nave enemiga
-	UPROPERTY(EditAnywhere, Category = "Movement")
 	float Speed;
 	bool ChangeMove;
 	float Count;
