@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShipScrap() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyShipScrap, 2033950774);
+	IMPLEMENT_CLASS(AEnemyShipScrap, 2025251428);
 	template<> GALAGA_USFX_LAB01_API UClass* StaticClass<AEnemyShipScrap>()
 	{
 		return AEnemyShipScrap::StaticClass();

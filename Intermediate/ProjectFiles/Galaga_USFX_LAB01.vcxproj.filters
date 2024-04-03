@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Galaga_USFX_LAB01.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{53D74A67-8B7D-4CFD-AFD0-1C5B0D03A316}</UniqueIdentifier>
+      <UniqueIdentifier>{A8A1A315-8369-46B5-A6F7-B37A9F024E7C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Galaga_USFX_LAB01.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{1973F153-1396-4691-892A-AA2D9A630F33}</UniqueIdentifier>
+      <UniqueIdentifier>{D7DD55DB-F953-4B48-8B93-2086C3DADE98}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,8 +32,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Galaga_USFX_LAB01">
-      <UniqueIdentifier>{DD76BDE7-7D1D-4EC6-8650-E46A8AB26B13}</UniqueIdentifier>
+      <UniqueIdentifier>{1ECC48C6-23BF-4EC9-B38D-585A50C7BB47}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB01\EnemyAliens.cpp">
+      <Filter>Source\Galaga_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_LAB01\EnemyAliens.h">
+      <Filter>Source\Galaga_USFX_LAB01</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX_LAB01\EnemyShip.cpp">
       <Filter>Source\Galaga_USFX_LAB01</Filter>
     </ClCompile>
@@ -167,6 +173,30 @@
       <Filter>Source\Galaga_USFX_LAB01</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX_LAB01\MovementPatternComponent.h">
+      <Filter>Source\Galaga_USFX_LAB01</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB01\PlayerShip.cpp">
+      <Filter>Source\Galaga_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_LAB01\PlayerShip.h">
+      <Filter>Source\Galaga_USFX_LAB01</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB01\SetsMovementsComponent.cpp">
+      <Filter>Source\Galaga_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_LAB01\SetsMovementsComponent.h">
+      <Filter>Source\Galaga_USFX_LAB01</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB01\ShielComponent.cpp">
+      <Filter>Source\Galaga_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_LAB01\ShielComponent.h">
+      <Filter>Source\Galaga_USFX_LAB01</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB01\SpawnEnemy.cpp">
+      <Filter>Source\Galaga_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_LAB01\SpawnEnemy.h">
       <Filter>Source\Galaga_USFX_LAB01</Filter>
     </ClInclude>
   </ItemGroup>
